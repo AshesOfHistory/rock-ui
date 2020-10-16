@@ -9,7 +9,7 @@ function App() {
       <h1>hello worle</h1>
       <h2>hello worle</h2>
       <h3>hello worle</h3>
-      <Button>default</Button>
+      <Button className={'custom'} onClick={(e) => {e.preventDefault(); alert(111)}}>default</Button>
       <Button disabled>default disabled</Button>
       <Button btnType={ButtonType.Primary} size={ButtonSize.Large}>primary large</Button>
       <Button btnType={ButtonType.Danger
