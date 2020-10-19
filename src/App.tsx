@@ -1,14 +1,20 @@
 import React from 'react';
 import './styles/index.scss';
 import Button, {ButtonType, ButtonSize} from './components/Button/button'
+import Menu from './components/Menu/menu';
+import MenuItem from './components/Menu/menuItem';
 
 function App() {
   return (
     <div className="App">
       test rock-ui
-      <h1>hello worle</h1>
-      <h2>hello worle</h2>
-      <h3>hello worle</h3>
+      
+      <Menu defaultIndex={2} mode={"vertical"} onSelect={index => console.log(index)}>
+        <MenuItem index={0}> link</MenuItem>
+        <MenuItem disabled index={1}> link2</MenuItem>
+        <MenuItem index={2}> link3</MenuItem>
+      </Menu>
+
       <Button className={'custom'} onClick={(e) => {e.preventDefault(); alert(111)}}>default</Button>
       <Button disabled>default disabled</Button>
       <Button btnType={ButtonType.Primary} size={ButtonSize.Large}>primary large</Button>
